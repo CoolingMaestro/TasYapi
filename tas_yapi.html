@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taş Yapı - PVC ve Alüminyum Sistemleri</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#1e3a8a", secondary: "#64748b" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Montserrat', sans-serif;
+      }
+      .hero-section {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=modern%20building%20with%20large%20glass%20windows%20and%20aluminum%20frames%2C%20architectural%20photography%2C%20professional%20real%20estate%20photography%2C%20bright%20daylight%2C%20clean%20lines%2C%20contemporary%20design%2C%20high-end%20construction%2C%20premium%20quality%20materials%2C%20blue%20sky%20background%2C%20minimalist%20aesthetic&width=1920&height=1080&seq=123456&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+      }
+      input:focus, button:focus {
+      outline: none;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col lg:flex-row justify-between items-center">
+          <div class="flex items-center mb-4 lg:mb-0">
+            <h1 class="text-3xl font-bold text-primary font-['Montserrat']">
+              Taş Yapı
+            </h1>
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 text-sm"
+          >
+            <div class="flex items-center space-x-2">
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-phone-line ri-lg"></i>
+              </div>
+              <span>+90 555 123 4567</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <div
+                class="w-8 h-8 flex items-center justify-center text-primary"
+              >
+                <i class="ri-mail-line ri-lg"></i>
+              </div>
+              <span>info@tasyapi.com</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
+              >
+                <i class="ri-facebook-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
+              >
+                <i class="ri-instagram-line ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <nav class="bg-primary text-white">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center">
+            <div class="hidden lg:flex space-x-8">
+              <a href="#" class="py-4 px-2 font-medium border-b-2 border-white"
+                >Ana Sayfa</a
+              >
+              <a
+                href="#"
+                class="py-4 px-2 font-medium border-b-2 border-transparent hover:border-white transition-colors"
+                >Hakkımızda</a
+              >
+              <a
+                href="#"
+                class="py-4 px-2 font-medium border-b-2 border-transparent hover:border-white transition-colors"
+                >Ürünler</a
+              >
+              <a
+                href="#"
+                class="py-4 px-2 font-medium border-b-2 border-transparent hover:border-white transition-colors"
+                >Projeler</a
+              >
+              <a
+                href="#"
+                class="py-4 px-2 font-medium border-b-2 border-transparent hover:border-white transition-colors"
+                >İletişim</a
+              >
+            </div>
+            <div class="lg:hidden py-4">
+              <button
+                id="mobile-menu-button"
+                class="text-white focus:outline-none !rounded-button"
+              >
+                <div class="w-10 h-10 flex items-center justify-center">
+                  <i class="ri-menu-line ri-2x"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="lg:hidden hidden pb-4">
+            <a
+              href="#"
+              class="block py-2 px-4 text-sm hover:bg-blue-800 !rounded-button"
+              >Ana Sayfa</a
+            >
+            <a
+              href="#"
+              class="block py-2 px-4 text-sm hover:bg-blue-800 !rounded-button"
+              >Hakkımızda</a
+            >
+            <a
+              href="#"
+              class="block py-2 px-4 text-sm hover:bg-blue-800 !rounded-button"
+              >Ürünler</a
+            >
+            <a
+              href="#"
+              class="block py-2 px-4 text-sm hover:bg-blue-800 !rounded-button"
+              >Projeler</a
+            >
+            <a
+              href="#"
+              class="block py-2 px-4 text-sm hover:bg-blue-800 !rounded-button"
+              >İletişim</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section py-20 md:py-32">
+      <div class="container mx-auto px-4 w-full">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+            Kaliteli PVC ve Alüminyum Sistemleri
+          </h1>
+          <p class="text-lg md:text-xl text-gray-700 mb-8">
+            Halis Büyüktaş önderliğinde 2005'den beri inşaat projeleriniz için
+            yüksek kaliteli pencere, kapı ve cam sistemleri sunuyoruz.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#"
+              class="bg-primary text-white px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-blue-900 transition-colors"
+              >Projelerimizi Görün</a
+            >
+            <a
+              href="#"
+              class="bg-white text-primary border border-primary px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors"
+              >Bize Ulaşın</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Hizmetlerimiz</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Taş Yapı olarak, inşaat projeleriniz için ihtiyaç duyduğunuz tüm
+            PVC, alüminyum ve cam sistemlerini profesyonel ekibimizle sunuyoruz.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- PVC Systems -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105"
+          >
+            <div class="h-56 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20PVC%20windows%20and%20doors%2C%20white%20frames%2C%20clean%20installation%2C%20energy%20efficient%20design%2C%20residential%20building%2C%20professional%20product%20photography%2C%20bright%20lighting%2C%20detailed%20craftsmanship%2C%20high%20quality%20materials&width=600&height=400&seq=123457&orientation=landscape"
+                alt="PVC Sistemleri"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                PVC Sistemleri
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Yüksek ısı ve ses yalıtımı sağlayan, dayanıklı ve estetik PVC
+                pencere ve kapı sistemleri ile yaşam alanlarınızı konforlu hale
+                getiriyoruz.
+              </p>
+              <a
+                href="#"
+                class="inline-block text-primary font-medium hover:underline"
+                >Detaylı Bilgi
+                <i class="ri-arrow-right-line align-middle ml-1"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Aluminum Systems -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105"
+          >
+            <div class="h-56 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20aluminum%20window%20frames%20and%20doors%2C%20sleek%20design%2C%20commercial%20building%2C%20architectural%20detail%2C%20professional%20installation%2C%20contemporary%20style%2C%20durable%20materials%2C%20elegant%20finish%2C%20minimalist%20aesthetic&width=600&height=400&seq=123458&orientation=landscape"
+                alt="Alüminyum Sistemleri"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Alüminyum Sistemleri
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Modern mimari projelere uygun, dayanıklı ve şık alüminyum
+                pencere, kapı ve cephe sistemleri ile projelerinize değer
+                katıyoruz.
+              </p>
+              <a
+                href="#"
+                class="inline-block text-primary font-medium hover:underline"
+                >Detaylı Bilgi
+                <i class="ri-arrow-right-line align-middle ml-1"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Glass and Metal Works -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105"
+          >
+            <div class="h-56 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20glass%20balustrades%20and%20railings%2C%20metal%20work%2C%20transparent%20glass%20panels%2C%20stainless%20steel%20details%2C%20architectural%20feature%2C%20luxury%20building%2C%20professional%20installation%2C%20contemporary%20design%2C%20safety%20features&width=600&height=400&seq=123459&orientation=landscape"
+                alt="Cam ve Metal İşleri"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Cam ve Metal İşleri
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Cam balkon, küpeşte, korkuluk ve özel cam uygulamaları ile
+                projelerinizin tüm cam ve metal işlerini uzman ekibimizle
+                tamamlıyoruz.
+              </p>
+              <a
+                href="#"
+                class="inline-block text-primary font-medium hover:underline"
+                >Detaylı Bilgi
+                <i class="ri-arrow-right-line align-middle ml-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20business%20portrait%20of%20a%20Turkish%20middle-aged%20man%20in%20a%20suit%2C%20confident%20pose%2C%20office%20background%2C%20architectural%20elements%20visible%2C%20construction%20industry%20executive%2C%20formal%20business%20attire%2C%20friendly%20but%20professional%20expression&width=600&height=700&seq=123460&orientation=portrait"
+              alt="Halis Büyüktaş"
+              class="rounded-lg shadow-lg w-full max-w-md mx-auto"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              Kurumsal Kimliğimiz
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Taş Yapı, 2005 yılında Halis Büyüktaş tarafından İstanbul'da
+              kurulmuştur. Kurulduğumuz günden bu yana, inşaat sektöründe PVC ve
+              alüminyum pencere sistemleri alanında kaliteli hizmet sunmayı ilke
+              edindik.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Deneyimli ekibimiz ve kaliteli malzeme kullanımı ile
+              müşterilerimize en iyi hizmeti sunmak için çalışıyoruz.
+              Projelerinizin her aşamasında yanınızda olarak, ihtiyaçlarınıza
+              uygun çözümler üretiyoruz.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#"
+                class="bg-primary text-white px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-blue-900 transition-colors"
+                >Detaylı Bilgi</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Tamamlanan Projelerimiz
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Yıllar içinde tamamladığımız başarılı projelerimizden bazılarını
+            sizlerle paylaşıyoruz.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20apartment%20building%20with%20large%20windows%2C%20residential%20complex%2C%20contemporary%20architecture%2C%20completed%20construction%20project%2C%20professional%20real%20estate%20photography%2C%20urban%20setting%2C%20high%20quality%20windows%20and%20doors%20visible&width=600&height=450&seq=123461&orientation=landscape"
+                alt="Residence Projesi"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-primary px-6 py-2 !rounded-button whitespace-nowrap font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform"
+                  >Detayları Gör</a
+                >
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800">Mavi Residence</h3>
+              <p class="text-gray-600">İstanbul, Kadıköy</p>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20glass%20facade%2C%20commercial%20property%2C%20corporate%20headquarters%2C%20urban%20architecture%2C%20professional%20building%20photography%2C%20aluminum%20frame%20windows%2C%20contemporary%20design%2C%20business%20district&width=600&height=450&seq=123462&orientation=landscape"
+                alt="Ofis Projesi"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-primary px-6 py-2 !rounded-button whitespace-nowrap font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform"
+                  >Detayları Gör</a
+                >
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800">Yeşil Plaza</h3>
+              <p class="text-gray-600">İstanbul, Levent</p>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=luxury%20villa%20with%20large%20windows%20and%20sliding%20doors%2C%20residential%20property%2C%20modern%20home%2C%20architectural%20photography%2C%20high-end%20PVC%20and%20aluminum%20systems%2C%20garden%20view%2C%20elegant%20design%2C%20premium%20quality&width=600&height=450&seq=123463&orientation=landscape"
+                alt="Villa Projesi"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-primary px-6 py-2 !rounded-button whitespace-nowrap font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform"
+                  >Detayları Gör</a
+                >
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800">Deniz Villaları</h3>
+              <p class="text-gray-600">İzmir, Çeşme</p>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=shopping%20mall%20with%20glass%20atrium%2C%20commercial%20building%2C%20retail%20space%2C%20modern%20architecture%2C%20professional%20photography%2C%20large%20glass%20installations%2C%20aluminum%20framing%2C%20public%20space%2C%20urban%20development&width=600&height=450&seq=123464&orientation=landscape"
+                alt="AVM Projesi"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-primary px-6 py-2 !rounded-button whitespace-nowrap font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform"
+                  >Detayları Gör</a
+                >
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800">Merkez AVM</h3>
+              <p class="text-gray-600">Ankara, Çankaya</p>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=hotel%20building%20with%20balconies%20and%20glass%20railings%2C%20hospitality%20project%2C%20seaside%20resort%2C%20architectural%20photography%2C%20aluminum%20and%20glass%20installations%2C%20tourist%20accommodation%2C%20contemporary%20design%2C%20vacation%20property&width=600&height=450&seq=123465&orientation=landscape"
+                alt="Otel Projesi"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-primary px-6 py-2 !rounded-button whitespace-nowrap font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform"
+                  >Detayları Gör</a
+                >
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800">Sahil Otel</h3>
+              <p class="text-gray-600">Antalya, Kemer</p>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="https://readdy.ai/api/search-image?query=educational%20building%20with%20modern%20windows%2C%20school%20project%2C%20campus%20architecture%2C%20professional%20photography%2C%20classroom%20windows%2C%20aluminum%20systems%2C%20contemporary%20educational%20facility%2C%20academic%20environment&width=600&height=450&seq=123466&orientation=landscape"
+                alt="Okul Projesi"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-primary px-6 py-2 !rounded-button whitespace-nowrap font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform"
+                  >Detayları Gör</a
+                >
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-800">Bilim Koleji</h3>
+              <p class="text-gray-600">İstanbul, Ataşehir</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a
+            href="#"
+            class="inline-block bg-primary text-white px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-blue-900 transition-colors"
+            >Tüm Projeler</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Neden Biz?</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Taş Yapı olarak, projelerinizde fark yaratmak için size sunduğumuz
+            avantajlar.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Advantage 1 -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg text-center transition-transform hover:scale-105"
+          >
+            <div
+              class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-team-line ri-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Profesyonel Ekip
+            </h3>
+            <p class="text-gray-600">
+              Deneyimli ve uzman kadromuzla projelerinizi titizlikle
+              yürütüyoruz.
+            </p>
+          </div>
+          <!-- Advantage 2 -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg text-center transition-transform hover:scale-105"
+          >
+            <div
+              class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-award-line ri-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Kaliteli Malzeme
+            </h3>
+            <p class="text-gray-600">
+              Sektörün önde gelen markalarının ürünlerini kullanarak kaliteden
+              ödün vermiyoruz.
+            </p>
+          </div>
+          <!-- Advantage 3 -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg text-center transition-transform hover:scale-105"
+          >
+            <div
+              class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-time-line ri-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Zamanında Teslimat
+            </h3>
+            <p class="text-gray-600">
+              Projelerinizi planlanan sürede tamamlayarak zaman kaybını
+              önlüyoruz.
+            </p>
+          </div>
+          <!-- Advantage 4 -->
+          <div
+            class="bg-gray-50 p-6 rounded-lg text-center transition-transform hover:scale-105"
+          >
+            <div
+              class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-customer-service-2-line ri-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Müşteri Memnuniyeti
+            </h3>
+            <p class="text-gray-600">
+              Müşterilerimizin ihtiyaç ve beklentilerini en iyi şekilde
+              karşılamak için çalışıyoruz.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact CTA -->
+    <section class="py-16 bg-primary text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Projeleriniz İçin Bize Ulaşın</h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">
+          İnşaat projeleriniz için PVC, alüminyum ve cam sistemleri konusunda
+          profesyonel destek almak için hemen iletişime geçin.
+        </p>
+        <a
+          href="#"
+          class="inline-block bg-white text-primary px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors"
+          >Bize Ulaşın</a
+        >
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <!-- Company Info -->
+          <div>
+            <h3 class="text-xl font-['Pacifico'] mb-4">Taş Yapı</h3>
+            <p class="text-gray-400 mb-4">
+              Halis Büyüktaş önderliğinde 2005'den beri kaliteli PVC ve
+              alüminyum sistemleri ile hizmetinizdeyiz.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-facebook-fill ri-lg"></i>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-instagram-line ri-lg"></i>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-linkedin-fill ri-lg"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Hızlı Erişim</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Ana Sayfa</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Hakkımızda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Ürünler</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Projeler</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >İletişim</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Services -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Hizmetlerimiz</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >PVC Pencere Sistemleri</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Alüminyum Doğrama</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Cam Balkon</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Küpeşte ve Korkuluk</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Özel Cam Uygulamaları</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4">İletişim Bilgileri</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mt-1 mr-3"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-400"
+                  >Atatürk Mah. İstiklal Cad. No:123, Ümraniye, İstanbul</span
+                >
+              </li>
+              <li class="flex items-center">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-400">+90 555 123 4567</span>
+              </li>
+              <li class="flex items-center">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-400">info@tasyapi.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Map -->
+        <div class="mb-8 rounded-lg overflow-hidden h-64 bg-gray-800">
+          <div
+            class="w-full h-full"
+            style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-position: center; background-size: cover;"
+          ></div>
+        </div>
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 pt-6 text-center text-gray-500">
+          <p>© 2025 Taş Yapı - Halis Büyüktaş. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Mobile Menu Script -->
+    <script id="mobile-menu-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
